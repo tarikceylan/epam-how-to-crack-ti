@@ -6,7 +6,7 @@
 
 **Critical Rendering Path(CRP)** is the sequence of steps the **browser** take in order to convert **HTML, CSS** and **JavaScript** into pixels. **Critical Rendering Path** includes DOM, CSSOM, render tree and layout
 
-> References:
+> **References:**
 >
 > - [Critical Rendering Path | MDN](https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path#:~:text=The%20Critical%20Rendering%20Path%20is,render%20path%20improves%20render%20performance.)
 
@@ -21,7 +21,7 @@
 - **Track crawl status** using tools provided by the search engine
 - **Exclude pages that is not related to your content from indexing** by configuring robots meta tags
 
-> References:
+> **References:**
 >
 > - [How Search Engines Work](https://moz.com/beginners-guide-to-seo/how-search-engines-operate)
 > - [Improving Your Site's Indexing and Ranking](https://developers.google.com/search/blog/2006/02/improving-your-sites-indexing-and)
@@ -33,7 +33,7 @@ In **Desktop First Design Approach**, the design is **based on a desktop machine
 
 In **Mobile First Design Approach**, the design is **based on a mobile device** and then it is ensured that responsive design can also be used on desktop. Certain elements can have more space or hidden elements can be shown. **This approach aims for the best user exprience for mobile devices.**
 
-> References:
+> **References:**
 >
 > - [Mobile or Desktop First Design?](https://toomba.com/en/blogs/mobile-or-desktop-first-design)
 
