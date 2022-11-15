@@ -153,6 +153,8 @@ HTML5 building blocks consist of **semantics, connectivity, multimedia support, 
 >
 > - [Difference Between `localStorage`, `sessionStorage` and `cookie` | StackOverflow](https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies)
 
+---
+
 ## **2. CSS**
 
 ### **2. 1 What are the possible ways to apply CSS styles to a web page?**
