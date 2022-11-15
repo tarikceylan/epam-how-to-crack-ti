@@ -1,8 +1,10 @@
-# **HTML, CSS and JS Interview Questions**
+# **HTML and CSS Interview Questions**
 
 ## **Week 1**
 
-## **HTML**
+---
+
+## **1. HTML**
 
 ### **1. 1 What is Critical Rendering Path?**
 
@@ -149,4 +151,101 @@ HTML5 building blocks consist of **semantics, connectivity, multimedia support, 
 
 > **References:**
 >
-> - [Difference Between `localStorage`, `sessionStorage` and Cookie | StackOverflow](https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies)
+> - [Difference Between `localStorage`, `sessionStorage` and `cookie` | StackOverflow](https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies)
+
+## **2. CSS**
+
+### **2. 1 What are the possible ways to apply CSS styles to a web page?**
+
+There are three methods to apply a CSS style to a web page.
+
+- **Linked**
+  CSS rules are stored in a seperate file and `<link>` tag is used to refer to that file inside the `<head>` element.
+
+```HTML
+    <link rel='stylesheet' type='text/css' href='style.css'>
+```
+
+- **Embedded**
+  CSS rules are defined inside the HTML document's `<head>` element within the `<style>` tag
+  **Note:** This approach should be kept to a minimum.
+
+- **Inline**
+  CSS rules are inserted into HTML tags as an attribute
+
+> **References:**
+>
+> - [Applying CSS to HTML](https://en.wikibooks.org/wiki/Cascading_Style_Sheets/Applying_CSS_to_HTML_and_XHTML)
+
+### **2. 2 What does the cascading portion of CSS mean?**
+
+**Cascading** in CSS describes an algorithm which determines defined CSS rule priorities and which rules to apply depending on provided selectors across multiple styling resources.
+
+> **References:**
+>
+> - [Introducing the CSS Cascade | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
+
+### **2. 3 What is CSS preprocessor?**
+
+A **CSS Preprocessor** is a program which generates CSS from its unique syntax that allows developers to have more functionality compared to basic CSS.
+
+> **References:**
+>
+> [CSS preprocessor | MDN](https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor)
+
+### **2. 4 What are media queries?**
+
+**Media queries** is used for applying different CSS rules for different screen resolutions or viewport width.
+
+> **References:**
+>
+> [Using Media Queries | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+### **2. 5 What does `box-sizing` do?**
+
+`box-sizing` property is used to determine how the total width and height of an element is calculated.
+
+> **References:**
+>
+> [Box Sizing | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+
+### **2. 6 Explain some pros and cons for CSS animations versus JavaScript animations**
+
+**CSS Animations** can be created using **transitions** or **keyframes** are easier to implement, they can porivde smoother visuals and can be optimized by the browser for performance for simple animations. However, they do not perform well for advanced animations.
+
+**JavaScript Animations** are more efficient as the desired effect complexity increases. Although they become more complex than writing CSS animations
+
+> **References:**
+>
+> - [Animations: CSS vs JavaScript](https://medium.com/neocoast/animations-css-vs-javascript-226903d6976a)
+> - [CSS and JavaScript Animations Performance | MDN ](https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance)
+
+### **2. 7 What is theming? How to respond on the system theme change?**
+
+**Theming** is giving end-users the ability to make custimizations on websites or web apps.
+
+We can store theme preference with client information and provide the prefered configurations on request.
+
+> **References:**
+>
+> - [Website Theming with CSS Custom Properties](https://www.freecodecamp.org/news/website-theming-with-css-custom-properties-and-gatsbyj)
+
+### **2. 8 How to make images responsive?**
+
+- Changing image resolution with `media-queries`
+- Set relative units based on the viewport (`vw`, `vh` etc.) rather than absolute units (`px`, `in` etc. ).
+- Using `srcset` and `sizes` attributes in the `<img>` tag
+
+> **References:**
+>
+> - [Responsive Images | MDN ](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+
+### **2. 9 Explain CSS grid layout with example**
+
+**CSS Grid Layout** is used for dividing a page into grids which allows developers to use a column-row like structure.
+
+**For example:** We can use grid system to layout a blog page. The navigation links would be on the top, under it there would be main content on the right hand side and more information about the website map, categories etc. on the left hand side.
+
+> **References:**
+>
+> - [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
