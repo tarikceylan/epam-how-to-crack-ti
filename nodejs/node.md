@@ -6,7 +6,7 @@
 
 ## **1. NodeJS**
 
-## **1.1 What is NodeJS?**
+### **1.1 What is NodeJS?**
 
 **NodeJS** is an open-source, cross-platform, asynchronous event-driven JavaScript runtime.
 
@@ -14,7 +14,7 @@
 >
 > - [NodeJS.org](https://nodejs.org/en/about/)
 
-## **1. 2 What is package.json?**
+### **1. 2 What is package.json?**
 
 **package.json** holds various metadata about the project which is used to give information to [npm](//todo) about the project itself, its dependencies and their versions
 
@@ -22,7 +22,7 @@
 >
 > - [What is the file `package.json`?](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)
 
-## **1. 7 How Event Loop works?**
+### **1. 7 How Event Loop works?**
 
 **Event Loop** constantly monitors and listens on call stack and callback queue. If the call stack is empty, the event loop will call the next operation from the callback queue and push it to the call stack. This iteration is called a tick in the event loop and it goes on until execution of the whole file is complete
 
@@ -30,7 +30,7 @@
 >
 > - []()
 
-## **1. 8 Is NodeJS entirely based on a single-thread?**
+### **1. 8 Is NodeJS entirely based on a single-thread?**
 
 **No.** NodeJS uses "Single Threaded Event Loop Model" architecture to handle multiple operations. However, libuv works multi-thread behind the scene.
 
@@ -38,7 +38,7 @@
 >
 > - [Is NodeJS Single Threaded or Multi Threaded?](https://dev.to/arealesramirez/is-node-js-single-threaded-or-multi-threaded-and-why-ab1)
 
-## **1. 10 What kind of streams does NodeJS have?**
+### **1. 10 What kind of streams does NodeJS have?**
 
 - **Writable** streams are the streams that data can be written on.
 - **Readable** streams are the streams that data can be read from.
