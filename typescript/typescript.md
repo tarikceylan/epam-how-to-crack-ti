@@ -54,7 +54,7 @@ When TypeScript code gets compiled by `tsc` using its built-in compiler, it conv
 
 > **References:**
 >
-> -[TypeScript Documentation | tsc - TypeScript Compiler](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#tsc-the-typescript-compiler)
+> -[tsc - TypeScript Compiler | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#tsc-the-typescript-compiler)
 
 ---
 
@@ -66,7 +66,7 @@ When TypeScript code gets compiled by `tsc` using its built-in compiler, it conv
 
 > **References:**
 >
-> - [TypeScript Documentation | Void](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)
+> - [Void | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)
 
 ### **2. 2 Explain how enums work in TypeScript?**
 
@@ -74,7 +74,7 @@ When TypeScript code gets compiled by `tsc` using its built-in compiler, it conv
 
 > **References:**
 >
-> - [TypeScript Documentation | Enums](https://www.typescriptlang.org/docs/handbook/enums.html)
+> - [Enums | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/enums.html)
 
 ### **2. 3 What is an interface?**
 
@@ -82,7 +82,7 @@ When TypeScript code gets compiled by `tsc` using its built-in compiler, it conv
 
 > **References:**
 >
-> - [TypeScript Documentation | Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html)
+> - [Object Types | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/objects.html)
 
 ### **2. 4 Explain the various ways to control member visibility in TypeScript.**
 
@@ -94,7 +94,7 @@ We can use access modifiers like `public`, `protected`, and `private`.
 
 > **References:**
 >
-> - [TypeScript Documentation | Member Visibility](https://www.typescriptlang.org/docs/handbook/2/classes.html#member-visibility)
+> - [Member Visibility | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/classes.html#member-visibility)
 
 ### **2. 5 What are Generics in TypeScript?**
 
@@ -102,7 +102,7 @@ We can use access modifiers like `public`, `protected`, and `private`.
 
 > **References:**
 >
-> - [TypeScript Documentation | Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+> - [Generics | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 
 ### **2. 6 What is the difference between extends and implements in TypeScript?**
 
@@ -122,7 +122,7 @@ We can use access modifiers like `public`, `protected`, and `private`.
 
 > **References:**
 >
-> - [TypeScript Documentation | Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+> - [Utility Types | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 
 ### **2. 8 What are type assertions in TypeScript?**
 
@@ -130,7 +130,7 @@ We can use access modifiers like `public`, `protected`, and `private`.
 
 > **References:**
 >
-> - [TypeScript Documentation | Type Assertions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)
+> - [Type Assertions | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)
 
 ### **2. 9 When should you use the unknown type?**
 
@@ -160,7 +160,7 @@ We can use access modifiers like `public`, `protected`, and `private`.
 
 > **References**
 >
-> - [TypeScript Documentation | Literal Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types)
+> - [Literal Types | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types)
 
 ### **3. 2 What are abstract classes? When should you use one?**
 
@@ -168,7 +168,7 @@ We can use access modifiers like `public`, `protected`, and `private`.
 
 > **References:**
 >
-> - [TypeScript Documentation | Abstract Classes and Members](https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members)
+> - [Abstract Classes and Members | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members)
 > - [When To Use Abstract Classes in TypeScript](https://khalilstemmler.com/blogs/typescript/abstract-class/#:~:text=The%20most%20common%20use%20of,abstract%20class%20with%20a%20subclass.)
 
 ### **3. 3 Explain the tuple types in TypeScript.**
@@ -177,7 +177,7 @@ We can use access modifiers like `public`, `protected`, and `private`.
 
 > **References:**
 >
-> - [TypeScript Documentation | Tuple Types](https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types)
+> - [Tuple Types | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types)
 
 ### **3. 4 Explain how tuple destructuring works in TypeScript.**
 
@@ -190,4 +190,4 @@ let [a, b, c] = tuple; // a: number, b: string, c: boolean
 
 > **References:**
 >
-> - [TypeScript Documentation | Tuple Destructuring](https://www.typescriptlang.org/docs/handbook/variable-declarations.html#tuple-destructuring)
+> - [Tuple Destructuring | TypeScript Official Documentation](https://www.typescriptlang.org/docs/handbook/variable-declarations.html#tuple-destructuring)
