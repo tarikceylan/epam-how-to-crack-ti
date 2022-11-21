@@ -251,3 +251,152 @@ We can store theme preference with client information and provide the prefered c
 > **References:**
 >
 > - [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+
+---
+
+## **Week 2**
+
+---
+
+## **1. HTML**
+
+### **1. 13 Ways to improve website performnace**
+
+As far as HTML is concerned there are few ways to improve a website performance.
+
+- **Optimizing image size** is one of the first steps that could be taken for optimizing performance which includes **compressing images**, implementing **responsive design**, **formatting images in `JPEG` for images with wide color palettes**
+- **Using CDN (Content Delivery Network)** is benefitial when we need to serve static files on the website like fonts, images, huge css files etc. Hosting them on our website would defeat the purpose of a static website and could cause performance issues. CDN will optimize the delivery of said static files using a 3rd party's infrastructure.
+- **Minification and Bundling** can also help with increasing performance.
+  - **Minification** is optimizing the size of JavaScript and CSS files by removing or shortening the characters in the source code. The functionality doesn't change but it becomes relatively non-readable by humans evevn though theye can be perfectly read by browsers.
+  - **Bundling** is the process of combining JS and CSS files together into a single file which reduces the size. This process will help to decrease the number of file requests and improve performance.
+- **Caching** is the process of saving a specific version of the content into temporary storage which allows the browser to access the content faster if there is no change. This method is mostly preferable for static websites which doesn't require real-time interaction with the end user.
+
+> **References:**
+>
+> [Improve Website Performance](https://sematext.com/blog/improve-website-performance/)
+
+### **1. 14 What does `async` and `defer` refer in script tag? Describe the difference between `<script>`, `<script async>` and `<script defer>`**
+
+`<script>` tag freezes the building of DOM when a page is being loaded which leads to problems like script not being able to access the elements that comes after it or entire failure of loading a page if there is a bulk script blocking the page at the top.
+
+We can workaround this problem by using `<script>` tag at the end of the page body but this might also cause some delay when loading the script if the HTML document is too long.
+
+`defer` and `async` attributes help us to solve this problem.
+
+- `defer` attribute tells the browser not to wait for the script. The browser continues to process the HTML and loads the script in the background. When DOM is fully built and ready, script is ran.
+
+- `async` attribute indicates that the script is completely independent. These scripts also loads in background like `defer`. Only difference is `async` scripts are ran when they're ready.
+
+> **References**
+>
+> [`async` and `defer` | JavaScript.info](https://javascript.info/script-async-defer)
+
+### \*\*1. 15 What is an iframe and how does it work?
+
+**iframe** is an HTML element represents another embedded HTML element which has its own session history and `document`.
+
+`<iframe>` tag can have a source attribute which will point to another HTML document.
+
+```HTML
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+</iframe>
+```
+
+> **References**
+>
+> [iframe | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+
+### **1.16 Explain the use of rel="nofollow", rel="noreferrer", rel="noopener" attribute?**
+
+`rel` is sued to define a relationship between a linked resource and the current document
+
+- `nofollow` option indiates that the auther of the current document does not endoerse the referenced document
+- `noreferer` option is used to protect the information about where request is originating from to resource.
+- `noopener` option is used to limit the access to the original window object.
+  > **References**
+  >
+  > [`rel` attribute | MDN ]()
+
+### **1. 17 Explain the use of rel="preload", rel="prefetch", rel="preconnect" attribute?**
+
+- `rel='preload'` is used whenever we need a resource to be loaded early in the page lifecycle before the rendering engine kicks in. This ensures that the resource will be available and less likely to block rendering which improves performance.
+
+- `rel='prefetch'` has a lower priority compared to `preload`. It allows the browser to fetch resources in the background which might be needed later and stores thme in its cache.
+
+- `rel='preconnect'` allows the browser to setup early connections even before an HTTP request is sent to the server which could save time on whole request response lifecycle
+
+> **References**
+>
+> [Resource Hints](https://www.keycdn.com/blog/resource-hints)
+
+### **1. 18 What does CORS stand for and what issue does it address?**
+
+**CORS** stand for Cross-Origin Resource Sharing which is an HTTP-header based mechanism. It solves the problem when a reasource request from a different origin other than the one its own.
+
+> **References**
+>
+> [CORS | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+### **1. 19 What is the DOM? How does the DOM work?**
+
+**DOM (Document Object Model) is the representation of the elements and objects that structures a page on the web. **DOM\*\* represents the elements of the document as objects which are interactable by programming languages.
+
+> **References**
+>
+> [What is DOM? | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+
+---
+
+## 2. CSS
+
+### **2.10 What are the css selectors?**
+
+**CSS Selectors** are used to target a specific HTML elements which the css rules should be applied. They can be used to select a certain group of elements, like all `h1`s, or specific ones like `img` element with the logo id.
+
+> **References**
+>
+> [CSS Selectors | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+
+### **2.11 When to use css grid and flexbox?**
+
+For starters, both CSS `grid` and `flexbox` is helpful to have a responsive design.
+
+- `grid` is used more for complex layout structures in two dimensions.
+- `flexbox` is useful for responsive and maintainable designs with simpler, one-dimentional layouts.
+
+> **References**
+>
+> [CSS Flexbox vs Grid](https://blog.logrocket.com/flexbox-vs-css-grid/)
+
+### **2.12 What is CSS BEM?**
+
+**BEM (Block Element Modifier)** is a methodology that helps you create reusable components. It uses blocks, elements and modifiers to create modular architecture.
+
+> **References**
+>
+> [Introduction | BEM Official Website](https://getbem.com/introduction/)
+
+### **2.13 Explain the CSS “box model” and the layout components that it consists of**
+
+When browser is rendering the lay out of a document, its rendering engine represents each element as a standard CSS box model. Every box is composed of four areas :
+
+- **Content Area** is bounded by content edge and contains the content of the element.
+- **Padding Area** is bounded by padding edge and extends the content area to include element's padding.
+- **Border Area** is bounded by border edge and extends the padding area to include element's borders
+- **Margin Area** is bounded by margin edge and extends the border area to include an empty area between elements
+
+> **References**
+>
+> [Intorduction to CSS Box Model | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+
+### **2.14 What is CSS flexbox?**
+
+`flexbox` is a one-dimensional layout method for arranging items in a row-column structure. Every element or item "flex" to fill or shrink to fit in its container
+
+> **References**
+>
+> [Flexbox | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
