@@ -550,3 +550,351 @@ Those modules can be built-in modules, external modules and custom developed mod
 >
 > - [Window | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 > - [Window.document | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+
+---
+
+## **Week 2**
+
+---
+
+## **1. Data Types**
+
+### **1. 12 Explain what a `Symbol` is in JavaScript?**
+
+`Symbol` is a primitive type that is used for creating unique property keyts to an object
+
+> **References:**
+>
+> - [Symbol | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+
+### **1. 13 How do you check whether a string contains a substring?**
+
+There are two methods to check if a string contains a certain substring.
+
+- `.includes()` method returns `true` or `false` depending on if the string it's called on contains the given argument.
+
+- `.indexOf()` method retunrs the index of the given argument where it first appears.
+
+> **References:**
+>
+> - [`String.prototype.includes()` | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+> - [`String.prototype.indexOf()` | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
+
+---
+
+## **2. Objects, Classes, Prototypal inheritance**
+
+### **2. 4 How do you check if a key exists in an object?**
+
+`hasOwnProperty()` method or `in` operator can be used to check if a key exists in an object.
+
+- `hasOwnProperty()` method returns `true` or `false` depending on if the given string or symbol is a key of the object that it's called on.
+
+- `in` operator also returns a boolean value which is either `true` or `false`. The only difference it has from `hasOwnProperty()` method is, `in` operator also checks the objects that we call `in` on inherits from.
+
+> **References:**
+>
+> - []()
+
+### **2. 5 What is the main difference between Object.values and Object.entries method?**
+
+> **References:**
+>
+> - [How To Check If A `key` Exists In Object | freeCodeCamp.org](https://www.freecodecamp.org/news/how-to-check-if-an-object-has-a-key-in-javascript/)
+
+### **2. 6 How can you get the list of keys of any object?**
+
+`.keys()` method returns an array of strings which are the keys of the object that it is called on.
+
+> **References:**
+>
+> - [Object.keys() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+
+### **2. 7 What is a WeakSet?**
+
+`WeakSet` object lets us to store collections of objects and objects only where each object must be unique.
+
+> **References:**
+>
+> - [WeakSet | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+
+### **2. 8 What are the differences between WeakSet and Set?**
+
+- `WeakSet` can store only `object` where `Set` can store any type.
+- References to object in a `WeakSet` are held weakly. Which means, if there is no other reference to an object in a `WeakSet`, that object will be lost after its use and will be garbage collected unlike the values stored in a `Set`
+  > **References:**
+  >
+  > - [WeakSet | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+
+### **2. 9 What is a WeakMap?**
+
+`WeakMap` is a collection of key/value pairs where keys must be an object. Like `WeakSet`, `WeakMap` also doesn't create a strong reference to its keys.
+
+> **References:**
+>
+> - [WeakMap | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+
+### **2. 10 What are the differences between WeakMap and Map?**
+
+`WeakMap` doesn't allow any method for retrieving its keys and their keys are not enumerable, unlike `Map`. Therefore, its keys can be garbage collected after all references to its keys are lost.
+
+> **References:**
+>
+> - [WeakMap | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+
+### **2. 11 What is the difference between proto and prototype?**
+
+`__proto__` is the property that is added by default for any object that is used for lookup in the prototype chain to resolve methods and it points to the `prototype` of the object which is used to build `__proto__` when an object created with `new` keyword.
+
+> **References:**
+>
+> - [`__proto__` vs Prototype in JavaScript | StackOverflow](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript)
+
+---
+
+## **3. Context, Scope and Closure**
+
+### **3. 11 What are the problems with global variables?**
+
+Global variables can cause variable collisions in JavaScript when working on large scale projects since it's not a strongly typed language.
+
+Global variables clutter up the golobal namespace and slower to lookup than the local varaibles.
+
+> **References:**
+>
+> - [Why It Is A Bad Idea To Use Global Variables in JavaScript | Medium ](https://medium.com/@kumar.pranjal123fgiet/why-it-is-a-bad-idea-to-use-global-variables-in-javascript-d8028d1da04f)
+
+### **3. 12 That is the Funarg problem?**
+
+**Funarg** problem occurs when a function calls another function, and the nested functions body refers directly to the variables defined in the scope that function is defined.
+
+**Funarg** problem is basically a scope problem that we can solve using closures.
+
+> **References:**
+>
+> - [Funarg Problem | Wikipedia](https://en.wikipedia.org/wiki/Funarg_problem)
+
+### **3. 13 How does 'this' work in the arrow functions?**
+
+**Arrow functions** does not bind `this` in its local content. They point to the surrounding scope of where they're defined
+
+> **References:**
+>
+> - [this | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+
+---
+
+## **4. JSON**
+
+### **4. 4 Why do you need JSON?**
+
+\*\*JSON (JavaScript Notation Object) format is used for trasmitting structured data over a network.
+
+> **References:**
+>
+> - [Working with JSON | MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+---
+
+## **5. Array methods**
+
+### **5. 3 What is the purpose of the array slice method?**
+
+`.slice()` method returns a shallow copy of a portion of an array. The original array is not mutated but the returned copy is a modified verison with the given arguments.
+
+> **References:**
+>
+> - [`Array.prototype.slice()` | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+### **5. 4 What is the purpose of the array splice method?**
+
+`.splice()` changes the content of an array by either removing or replacing existing elements and adding new elements
+
+> **References:**
+>
+> - [`Array.prototype.splice()` | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+### **5. 5 List arrays methods, that mutate source array?**
+
+`pop()`, `push()`, `shift()`, `unshift()`, `reveerse()`, `sort()`, `splice()`
+
+> **References:**
+>
+> - [Mutable & Immutable Array Methods in JavaScript](https://www.sitepoint.com/immutable-array-methods-javascript/)
+
+### **5. 6 List arrays methods, that return new array?**
+
+`slice()`, `concat()`, `map()`, `filter()`
+
+> **References:**
+>
+> - [Mutable & Immutable Array Methods in JavaScript](https://www.sitepoint.com/immutable-array-methods-javascript/)
+
+---
+
+## **6. Functions**
+
+### **6. 5 What is a first class function?**
+
+A programming language is said to have 'first class functions' when functions are treated like any other varaible and can be passed as an argument or returned as a result of another funcftion
+
+> **References:**
+>
+> - [First Class Function | MDN](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+
+### **6. 6 What is a first order function?**
+
+> **References:**
+>
+> - [First Class Function](#6-5-what-is-a-first-class-function)
+
+### **6. 7 What is a Higher order function?**
+
+A function which takes other functions as argument or a function returning another function is called **Higher Order Function**
+
+> **References:**
+>
+> - [First Class Function | MDN](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+
+### **6. 8 What is a unary function?**
+
+**Unary Functions** are the functions that takes only one argument.
+
+> **References:**
+>
+> - [Unary Function](https://en.wikipedia.org/wiki/Unary_function)
+
+### **6. 9 What is the currying function?**
+
+Currying function is a transformed version of a normal function with arguments. It helps to run partial calls on functions when needed.
+
+Transforms `regularFn(a, b ,c)` into `curryFn(a)(b)(c)`
+
+> **References:**
+>
+> - [Currying | JavaScript.info](https://javascript.info/currying-partials)
+
+### **6. 10 What is an anonymous function?**
+
+**Anonymous functions** are functions that has not been given a name. They're usually used for the tasks that we would not call over and over again.
+
+> **References:**
+>
+> - [JavaScript Anonymous Functions](https://www.geeksforgeeks.org/javascript-anonymous-functions)
+
+---
+
+## **7. Async JavaScript**
+
+### **7. 11 What does promise.all method do?**
+
+`Promise.all()` method takes an array of promises and resolves when all provided promises are resovled and returns all the values in an array. `Promise.all()` is rejected when any of the provided promises rejects and returns the reject value
+
+> **References:**
+>
+> - [Promise.all() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+
+### **7. 12 What is the differance between promise.all and promise.allSettled?**
+
+`Promise.all()` gets a rejected state immediately when any of the given promises is rejected. However, `Promise.allSettled()` is always resolved and returns the completed state of given promises.
+
+> **References:**
+>
+> - [`Promise.all() `| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+> - [`Promise.allSettled()` | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
+
+### **7. 13 What is the purpose of race method in promise?**
+
+`Promise.race()` takes an array as an argument and returns the first value of the promise that is settled. It can be used to get the fastest resolving result of multiple promises.
+
+> **References:**
+>
+> - [`Promise.race()` | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
+
+---
+
+## **8. Common**
+
+### **8. 7 What is a strict mode in javascript?**
+
+**Strict mode** can be enabled with `'use strict'` phrase at the top of the file. Strict mode enables JavaScript to throw errors where the silent JavaScript errors occur.
+
+> **References:**
+>
+> - [Strict Mode | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
+### **8. 8 What are PWAs?**
+
+**PWA (Progressive Web App)** is a web app that uses number of specific technologies and standart patterns to take advantage of both web and native app features.
+
+> **References:**
+>
+> - [Progressive Web Apps (PWAs) | MDN](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+
+### **8. 9 What is memoization?**
+
+**Memoization** is an optimization technique. It's really similar to `caching`. Memoization, stores the output value of a function and stores it in the `cache`. If the value is required again, JavaScript first checks the cache and returns the value if exists.
+
+> **References:**
+>
+> - [What is Memoization? | freeCodeCamp.org](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)
+
+### **8. 10 How do you encode an URL?**
+
+`encodeURIComponent()` or `encodeURI()` functions encode a URI by replacing certain characters with their UTF-8 representations.
+
+`encodeURI()` can't form HTTP Requests and have limitations for certain characters.
+
+> **References:**
+>
+> - [encodeURI() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+> - [encodeURIComponent() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
+### **8. 11 How do you decode an URL?**
+
+`decodeURI()` or `decodeURIComponent()` functions can be used to decode URIs encoded with `encodeURI()` or `encodeURIComponent()` functions respectively.
+
+> **References:**
+>
+> - [decodeURI() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
+> - [decodeURIComponent | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
+
+---
+
+## **9. Browser API**
+
+### **9. 2 How do you get the current url with javascript?**
+
+`window.location.href` property can be used to get the current url.
+
+> **References:**
+>
+> - []()
+
+### **9. 3 What is a Fetch API?**
+
+**Fetch API** provides a way to fetching resources using JavaScript. It's similar to `XMLHTTPRequest` but with more powerful and flexible features.
+
+It can be used with the `fetch()` function which returns a promise that resolves to the response to the request to the given path.
+
+> **References:**
+>
+> - [Fetch API | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+### **9. 4 How to open two-way interactive session between browser and server?**
+
+**WebSocket API** makes it possible to open a two-way interactive communication between the client and the server.
+
+> **References:**
+>
+> - [Websocket API (WebSockets) | MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+
+### **9. 5 How to abort async operation?**
+
+`AbortController` interface represents a controller object which makes it possible to abort web requests when needed.
+
+`.abort()` method of `AbortController` can be used to abort a DOM request before it has completed.
+
+> **References:**
+>
+> - [AbortController | MDN](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)
