@@ -278,7 +278,7 @@ fn(); // logs out 'John'
 
 ---
 
-## JSON
+## 4. JSON
 
 ### **4. 1 What is JSON and its common operations?**
 
@@ -869,7 +869,7 @@ Transforms `regularFn(a, b ,c)` into `curryFn(a)(b)(c)`
 
 > **References:**
 >
-> - []()
+> - [location.href | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Location/href)
 
 ### **9. 3 What is a Fetch API?**
 
