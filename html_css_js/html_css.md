@@ -8,7 +8,9 @@
 
 ### **1. 1 What is Critical Rendering Path?**
 
-**Critical Rendering Path(CRP)** is the sequence of steps the **browser** take in order to convert **HTML, CSS** and **JavaScript** into pixels. **Critical Rendering Path** includes DOM, CSSOM, render tree and layout
+**Critical Rendering Path(CRP)** is the sequence of steps the **browser** take in order to convert **HTML, CSS** and **JavaScript** into pixels. **Critical Rendering Path** includes DOM, CSSOM, render tree and layout.
+
+It's the minimal requirements for a document to render.
 
 > **References:**
 >
