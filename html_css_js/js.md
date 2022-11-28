@@ -970,7 +970,7 @@ We can set up `<noscript>` tag in our HTML file to prompt a certain content to d
 Using **Clipboard API**, we can have access to clipboard functions. `clipboard.writeText()` method allow us to take a value from a DOM element and save it.
 
 > **References:**
-
+>
 > - [Clipboard.writeText() | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)
 
 ## **9. 9 How to read value from the clipboard?**
