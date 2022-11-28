@@ -402,3 +402,91 @@ When browser is rendering the lay out of a document, its rendering engine repres
 > **References**
 >
 > [Flexbox | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+
+---
+
+## **Week 3**
+
+## **1. HTML**
+
+### **1. 20 What is CSSOM?**
+
+**CSSOM (CSS Oject Model)** is a set of APIs that allows to manipulate CSS from JavaScript. It's used for reading and modifying CSS dynmically
+
+> **References:**
+>
+> - [CSS Object Model | MDN](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model)
+
+### **1. 21 Explain the difference between layout, painting and compositing?**
+
+- **Layout** is the step of rendering where elements of the page are positioned according to their properties in the order they were implemented.
+- **Painting** is the step where all the elements a page consists get their colors by colorizing the pixels.
+- **Compositing** is the step where elements are given their transforms and opacity. For example; a button changing color and size whenever is hovered.
+
+> **References:**
+>
+> - [Difference Between Layout, Painting and Composition | YouTube](https://www.youtube.com/watch?v=Dl2JmTjb4qk)
+
+### **1. 22 What are the Benefits of Server Side Rendering (SSR) Over Client Side Rendering (CSR)?**
+
+- **Faster load time** is achieved for the inital page to render since it's received from the server and ready to be parsed.
+- **Better SEO and page ranking** since the HTML is fuly formed on the server side.
+- **Page is fully interactable** when render is complete on browsers.
+
+> **References:**
+>
+> - [SSR vs CSR | Medium](https://medium.com/@prashantramnyc/server-side-rendering-ssr-vs-client-side-rendering-csr-vs-pre-rendering-using-static-site-89f2d05182ef)
+
+### **1. 23 What is difference between Select and Datalist?**
+
+`<datalist>` tag allows the user to provide a custom input, whereas `<select>` tag only works with pre-defined options
+
+> **References:**
+>
+> - [`<datalist>` vs `<select>` | GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-datalist-select-tags-in-html)
+
+## **2. CSS**
+
+### **2. 15 What is the difference between Pseudo-classes and pseudo-elements?**
+
+- **Pseudo-classes** are the selectors that selects an element when the element is in a specific state such as hovered or focused
+- **Pseudo-elements** are similar to pseudo-classes but they act as selected portion is an entirely different element.
+
+> **References:**
+>
+> - [Pseudo-Classes and Pseudo-Elements | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+
+### **2. 16 How do you specify units in the CSS?**
+
+Units can be specified depending on the property and value, after the value. Such as `width: 250px` or `height: 100vh`. `px` and `vh` are the units of the given properties and values
+
+> **References:**
+>
+> - [CSS Values and Units | MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+
+### **2. 17 What is the difference between class selectors and id selectors?**
+
+**ID Selectors** are used for selecting only one element with that specific id. A certain ID can only belong one element in the HTML structure where **Class Selectors** can be used for selecting multiple elements which belong to that class.
+
+> **References:**
+>
+> - [Class & ID Selectors in CSS](https://www.educative.io/answers/class-and-id-selectors-in-css)
+
+### **2. 18 What is the difference between the “nth-child()” and “nth-of-type()” selectors?**
+
+- `nth-child()` selects the nth child elemenet **regardless** of the types that comes before it.
+- `nth-of-type()` selects the nth child elemenet **considering** the types of elements that comes before it.
+
+> **References:**
+>
+> - [`nth-child()` vs `nth-of-type()` | CSSTricks](https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/)
+
+### **2. 19 What is the difference between RGBa, HEX and HSLa?**
+
+**RGBa** is represented with number values. The first three values represents red, green and blue levels of a color and the last value represents the opacity which ranges between 0 and 1. **RGBa** allows you to access to opacity compared to **HEX** which is represented by letters and numbers in a 6-digit or 3-digit format.
+
+**HSLa (Hue Saturation Lightness alpha)** is much like **RGBa** but instead of setting red, green and blue color levels, we set up the hue, saturation and lighting level as well as the opacity similar to RGBa
+
+> **References:**
+>
+> - [Colors On The Web: RGBa vs Hex vs HSLa](https://ironion.com/blog/2013/06/12/colors-on-the-web-rgb-vs-hex-vs-hsla/)
