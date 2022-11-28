@@ -898,3 +898,85 @@ It can be used with the `fetch()` function which returns a promise that resolves
 > **References:**
 >
 > - [AbortController | MDN](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)
+
+---
+
+## **Week 3**
+
+## **2. Objects, Classes, Prototypal inheritance**
+
+## **2. 12 How do you create an object with prototype?**
+
+`Object.create()` method can be used to create a new object using an existing objet as a prototype.
+
+> **References:**
+>
+> - []()
+
+## **2. 13 What is a proxy object?**
+
+> **References:**
+>
+> - [`Object.create()` | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
+## **4. JSON**
+
+## **4. 5 How do you define JSON arrays?**
+
+**JSON Arrays** can be defined by using square brackets (`[..]`)
+
+> **References:**
+>
+> - [JSON | MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+## **8. Common**
+
+## **8. 12 What is tree shaking?**
+
+**Tree shaking** is a term that is used for removal of dead code which depends on the module system and checks if the modules are imported or exported between JavaScript files.
+
+> **References:**
+>
+> - [Tree Shaking | MDN](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
+
+## **8. 13 How do you detect javascript disabled in the page?**
+
+We can set up `<noscript>` tag in our HTML file to prompt a certain content to detect if JavaScript is disabled.
+
+> **References:**
+>
+> - [`<noscript>` element | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)
+
+## **9. Browser API**
+
+## **9. 6 How do you detect a mobile browser?**
+
+`navigator.userAgentData` object has a property called `mobile` which has a value of a boolean. We can use that property's value to detect if a browser is mobile or not.
+
+> **References:**
+>
+> - [`Navigator.userAgentData | MDN`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgentData)
+
+## **9. 7 How can we draw something in the browser?**
+
+**Canvas API** provides functionality of drawing graphics via JavaScript and HTML `<canvas>` element.
+
+> **References:**
+>
+> - [Canvas API | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+
+## **9. 8 How to copy value to the clipboard?**
+
+Using **Clipboard API**, we can have access to clipboard functions. `clipboard.writeText()` method allow us to take a value from a DOM element and save it.
+
+> **References:**
+
+> - [Clipboard.writeText() | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)
+
+## **9. 9 How to read value from the clipboard?**
+
+Using **Clipboard API**, we can have access to clipboard functions. `clipboard.readText()` method allow us to read a value that exists in the clipboard.
+
+> **References:**
+>
+> - [Clipboard.readText() | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText)
