@@ -341,3 +341,60 @@ A system that complies some or all of the following guideline constraints is con
 
 > - **Horizontal Scaling** is based on partitioning the data between different phyiscal resources where as **Vertical Scaling** depends on a single physical resource.
 > - NoSQL Databases are scaled horizontally, whereas SQL databases scaled vertically as long as there is no sharding.
+
+---
+
+## **3. TypeScript**
+
+## **3. 1 TypeScript Infrastructure**
+
+### **1. Feedback**
+
+> Doubts on components of TS (didn't mention language services)
+
+**Answer:**
+
+> TypeScript is iternally divided into three main layers:
+>
+> - **Language** is where language specific syntax and keywords are defined.
+> - **TypeScript Compiler** is a configurable, internal compiler of TypeScript which converts TypeScript code into JavaScript code. During the conversion it also >performs operations like type checking and parsing.
+> - **TypeScript Language Services** provides information to help editors and other tools about the structure of language.
+
+---
+
+## **3. 2 Access Modifiers**
+
+### **1. Feedback**
+
+> Doubts on protected access, Abstract classes
+
+**Answer:**
+
+> - In TypeScript, `protected` members are only visible to subclasses of the class they're declared in.
+>
+> - **Abstract Classes** serve as a base class for subclasses which implements all abstract members.
+
+---
+
+## **3. 3 Utility Types**
+
+### **1. Feedback**
+
+> Could only mention Awaited
+
+**Answer:**
+
+> - `Awaited` is used for handling async operations like `async` and `await`, or `.then()` method on `Promise`s.
+> - `Partial` is used for constructing types where all properties of the type is set to optional.
+> - `Required` is used for constructing types where all properties of the type is set to required (the opposite of `Partial`)
+> - `Readonly` is used for constructing types where all properties are `readonly` which means they can't be re-assigned
+
+---
+
+## **3. 4 Advanced Typing**
+
+> Basic knowledge of interfaces and types; no details on difference
+
+**Answer:**
+
+> `interface` can be extended by declaring it a second time, whereas `type` can not. `type` can not be changed outside of its declaration
