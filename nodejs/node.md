@@ -399,9 +399,9 @@ Usage of `async/await` provides a cleaner and easier to maintain code structure 
 
 **Given-When-Then** pattern is a style of representing tests.
 
-- **'given'** represents the a certain behaviour.
-- **'when'** represents the sepcified behaviour.
-- **'then'** represents the specified behaviour.
+- **'given'** represents the state of a situation.
+- **'when'** represents some action that is to carried out.
+- **'then'** represents the expected outcome.
 
 > **References:**
 >
