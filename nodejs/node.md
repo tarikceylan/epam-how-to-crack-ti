@@ -615,3 +615,312 @@ When a client requests a web page's content, said web page sends its SSL certifi
 > **References:**
 >
 > - [What is Event Driven Architecture | RedHat](redhat.com/en/topics/integration/what-is-event-driven-architecture)
+
+---
+
+## **Week 3**
+
+## **1. Node.js**
+
+### **1. 4 What is the difference between dependencies and devDependencies in package.json?**
+
+- `dependencies` are the modules that project requires to function effectively on production.
+- `devDependencies` are the modules that is needed by the developer during developmente.
+
+> **References:**
+>
+> - [dependencies, devDependencies and peerDependencies | GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-dependencies-devdependencies-and-peerdependencies/)
+
+### **1. 9 What is the Event Emitter class? How it is related to other classes?**
+
+**Event Emitter** is a class inside the node's built-in `events` module that is responsible for handling events.
+
+Event Emitter can listen for events triggered by other classes and perform operations when told to.
+
+> **References:**
+>
+> - [Event Emitter | Nodejs](https://nodejs.org/docs/latest/api/events.html#class-eventemitter)
+
+### **1. 12 What are the differences between worker thread and child_process?**
+
+**Worker Thread** is a **single thread** that can complete a certain task, whereas a **child_process** is a process that can actually spawn new processes with their own memory.
+
+> **References:**
+>
+> - [Single Thread, Child Process, Worker Threads and Cluster in Nodejs](https://alvinlal.netlify.app/blog/single-thread-vs-child-process-vs-worker-threads-vs-cluster-in-nodejs)
+
+### **1. 13 What is the difference between commonJS and ES modules?**
+
+**CommonJS** module system is the default module system within Nodejs. ES Modules were introducted as a new standard.
+
+- CommonJS and ES Modules have different syntax and execution process for imports and exports.
+  CommonJS imports are dynamically resolved at runtime, where ES Modules are executed at parse time.
+- File Extensions are another difference between CommonJS and ES Modules
+  Files with `.js` extension are treated as CommonJS Modules and files with `.mjs` extension are treated as ES Modules.
+
+> **References:**
+>
+> - [CommonJS vs ES Modules](https://reflectoring.io/nodejs-modules-imports/)
+
+### **1. 14 How to force node.js to treat your .js files as ES modules?**
+
+We can use `.mjs` file extension and specify that we're using `type: module` in our `package.json` file while using ES6 import/export syntax for our modules
+
+> **References:**
+>
+> - [CommonJS vs ES Modules](https://reflectoring.io/nodejs-modules-imports/)
+
+## **2. Dealing With Async Code**
+
+### **2. 5 What is Promisification and when it is used?**
+
+**Promisification** is the conversion of a function that takes a callback into a function that returns a promise.
+
+It's used for having cleaner and more maintainable code with a better error handling and prevent memory leaks caused by callback behaviour.
+
+> **References:**
+>
+> - [Promisification | javascript.info](https://javascript.info/promisify)
+> - [Write Your Own Promisification From Scrath | freeCodeCamp.org](https://www.freecodecamp.org/news/write-your-own-promisify-function-from-scratch/)
+
+## **3. Express.js**
+
+### **3. 5 How can you differ an error handling function from a request handler function?**
+
+**Request Handler** functions can take `req`, `res`, and `next` parameters, whereas **error Handler** function additionally have `err` as a parameter
+
+> **References:**
+>
+> - [Error Handling | Express](https://expressjs.com/en/guide/error-handling.html)
+
+## **4. NestJS**
+
+### **4. 1 What can be a Provider in NestJS?**
+
+Providers are JavaScript classes in a module. Many of the basic NestJS classes can be treated as provider such as services, repositories, factories, helpers etc.
+
+> **References:**
+>
+> - [Providers | NestJS Documentation](https://docs.nestjs.com/providers#providers)
+
+### **4. 2 What are the use cases for Pipes in NestJS?**
+
+**Pipe** is a class defined with a decorator which implements `PipeTransform` interface
+
+Pipes can be used for:
+
+- **transforming** the input data (ex. from string to number)
+- **validation** of the input data
+
+> **References:**
+>
+> - [Pipes | NestJS Documentation](https://docs.nestjs.com/pipes)
+
+### **4. 3 Is there a possibility to bind extra logic before/after method execution in NestJS?**
+
+**Interceptor** is a class defined with a decorator which implements `NestInterceptor` interface and they can be used to bind extra logic before or after method execution.
+
+> **References:**
+>
+> - [Interceptors | NestJS](https://docs.nestjs.com/interceptors)
+
+### **4. 4 How all unhandled exceptions are processed in NestJS?**
+
+NestJS has a built-in exception layer which caughts unhandled layer and sends them to a global exception filter. We can also have full control over exception layer by creating custom **exception filters** to process unhandled exceptions.
+
+> **References:**
+>
+> - [Exception Filters | NestJS](https://docs.nestjs.com/exception-filters)
+
+## **5. Monitoring and Logging**
+
+Low
+
+### **5. 1 What is a Health check? Why do we need it?**
+
+**Health Check** is a review of QA processes which involves a thorough investiagion of testing process, tools metrics and the team.
+
+We use health check to identify the efficiency or the open to improvement parts of the system
+
+> **References:**
+>
+> - [Health Check Testing](https://www.prolifics-testing.com/testing-services/consultancy/testing-health-check#:~:text=The%20Health%20Check%20is%20a,for%20large%20or%20complex%20projects.)
+
+### **5. 2 What is a correlation ID? How it helps to debug your application?**
+
+The **correlation identifier** is a unique id that is assigned to every transaction which allows to find the root cause in case of a failure by tracking a transaction with the given id
+
+> **References:**
+>
+> - [Correlation Identifier | Medium](https://medium.com/@scokmen/debugging-microservices-part-ii-the-correlation-identifier-552f9016afcd)
+
+## **6. Testing**
+
+### **6. 4 What test runner libraries do you know?**
+
+- **Jest**
+- **Mocha**
+- **Jasmine**
+
+> **References:**
+>
+> - []()
+
+## **7. Software Design**
+
+### **7. 1. 1 REST API: What are the Levels of REST API?**
+
+Levels of a REST API is defined by [**Richardson Maturity Model**](https://restfulapi.net/richardson-maturity-model/)
+
+According to this model, there are four levels of maturity for a REST API:
+
+- **Level 0** services have a single URI and uses a single HTTP Method
+- **Level 1** services uses multiple URIs but single HTTP Method
+- **Level 2** services uses multiple URIs and HTTP Methods but doesn't use HATEOAS
+- **Level 3** services uses all three: Multiple URIs, HTTP Methods and HATEOAS
+
+> **References:**
+>
+> - [Richardson Maturity Model | restfulapi.net](https://restfulapi.net/richardson-maturity-model/)
+
+### **7. 3 What is GraphQL? What are its advantages over REST API?**
+
+**GraphQL** is a server-side technology for executing queries on data using APIs, whereas REST is an architectural style to design APIs and consume endpoints.
+
+- GraphQL can eliminate over-fetching or under-fetching.
+- GraphQL provides better performance in terms of speed by fetching only the data with required fields.
+
+> **References:**
+>
+> - [GraphQL Advantages & Disadvantages](https://www.javatpoint.com/graphql-advantages-and-disadvantages)
+
+## **8. Databases**
+
+## **8. 1 RDBMS (Postgres or MySQL)**
+
+### **8. 1. 5 What data types are presented in PostgreSQL?**
+
+- **Numeric Types** like `smallint`, `integer`, `bigint`, `decimal`
+- **Monetary Types** that can store currency amount
+- **Character Types** `character` with fixed length or `text` with unlimited length
+- **Date/Time Types** for representing date/time.
+- **Boolean Types** for representing boolean values.
+  and more
+
+> **References:**
+>
+> - [Data Types | PostgreSQL Documentation](https://www.postgresql.org/docs/current/datatype.html)
+
+### **8. 1. 7 What is a sub query?**
+
+**Subquery** is a nested query inside of another query or a subquery that returns a result to make use of.
+
+> **References:**
+>
+> - [Subqueries](https://learn.microsoft.com/en-us/sql/relational-databases/performance/subqueries?view=sql-server-ver16)
+
+### **8. 1. 9 What are Lock Levels in Postgres?**
+
+Locks Levels are used to restrict access to a specific structure.
+
+PostgreSQL provides five levels of locks:
+
+- **Table-Level Locks**
+- **Row-Level Locks**
+- **Page-Level Locks**
+- **Deadlocks**
+- **Advisory Locks**
+
+> **References:**
+>
+> - [Explicit Locking | PostgreSQL Documentation](https://www.postgresql.org/docs/current/explicit-locking.html)
+
+### **8. 1. 11 What is ORM? What problems does it solve?**
+
+**ORM (Object Relational Mapping)** tools allow us to execute queries in anobject-oriented way which allows us to write more readable and maintainable code.
+
+> **References:**
+>
+> - [What is an ORM | freeCodeCamp.org](https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/)
+
+## **8. 1. 12 TypeORM**
+
+### **8. 1. 12. 1 What is the Query Builder?**
+
+**Query Builder** makes it possible to write complex queries in a simpler way by constructing a query with the given properties.
+
+> **References:**
+>
+> - [TypeORM Query Builder](https://www.tutorialspoint.com/typeorm/typeorm_query_builder.htm)
+
+### **8. 1. 12. 2 What are Active Record and Data Mapper patterns?**
+
+- **Active Record** pattern is a way to access data in a relational database. Table is wrapped in a class. Therefore, a single row can be accessed with an obect instance
+
+- **Data Mapper** is a Data Access Layer that performs two-way transfer of data between database and in memory data representation in order to keep them independant of each other.
+
+> **References:**
+>
+> - [Active Record and Data Mappers of ORM | Medium](https://medium.com/oceanize-geeks/the-active-record-and-data-mappers-of-orm-pattern-eefb8262b7bb)
+
+### **8. 1. 12. 3 What is the difference between Raw Entities and Entities?**
+
+**Entity** is a class that represents a database table in relational databases, whereas **raw entities** represents a collection of specific fields of an entity.
+
+> **References:**
+>
+> - [Entity | TypeORM Documentation](https://typeorm.io/entities#entities)
+
+### **8. 1. 12. 4 How to process tables with a lot of data inside with typeorm?**
+
+- Streams can be used to slice the data on smaller pieces.
+- Define relation tables just to fetch the necessary data.
+
+> **References:**
+>
+> - []()
+
+## **9. Security**
+
+### **9. 3 How do you understand symmetric and asymmetric encryption?**
+
+- **Symmetric Encryption** uses only one key to both encrypt and decrypt data which is less secure compared to asymmetric encryption. Therefore data needs to be transfered in a secure way.
+  **Asymmetric Encryiption** uses one public and one private key which makes the whole encryption and decryption slower but safer.
+
+> **References:**
+>
+> - [Symmetric and Asymmetric Encryption | GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-symmetric-and-asymmetric-key-encryption/)
+
+### **9. 4 What is the difference between private and public key?**
+
+**Public key** that is provided by the recipent can be used to encrypt data and **private key** is only known by the recipent to decrypt the data.
+
+> **References:**
+>
+> - [Public vs Private Key](https://www.preveil.com/blog/public-and-private-key/)
+
+### **9. 8 What types of Authentication do you know? When to use them?**
+
+- **Password-Based Authentication** can be used for basic authentication purposes.
+- **Multi-Factor Authentication** provides extra layer of security after a basic authentication process is complete.
+- **Certificate-Based Authentication** is used to identify both users and devices by validating digital certificates. This method can be used to secure the access to an endpoint from various clients or devices.
+- **Biometric Authentication** can be used for securing access to a personal device or a system using biological characteristics.
+- **Token-Based Authentication** is used to store credentials of the users and provide certain permissions to access protected content.
+
+> **References:**
+>
+> - [Authentication Methods](https://www.idrnd.ai/5-authentication-methods-that-can-prevent-the-next-breach/)
+
+## **10 General questions**
+
+### **13. 3 What is a 3-tier WEB Application? Are the tiers logical or physical?**
+
+**Three-tier Web Application** is an application where the application is divided into three main layers.
+
+- **Presentation Tier (Physical)** where the user interface live and interaction with the user happens.
+- **Application Tier (Logical)** where the data is processed and business logic executes
+- **Data Tier (Phyiscal)** where the data is stored and managed.
+
+> **References:**
+>
+> - [Thee-Tier Architecture | IBM](https://www.ibm.com/cloud/learn/three-tier-architecture)
