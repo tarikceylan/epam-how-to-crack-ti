@@ -147,3 +147,197 @@
 > `async/await` provides a way for more readable and maintainable (cleaner) code compared to `Promise`. It's just a wrapper to restyle our code.
 
 ---
+
+## **2. Node.js**
+
+## **2. 1. Node.js Structure**
+
+### **1. Feedback**
+
+> Might be doubts on where event loop and async operations are running
+
+**Answer:**
+
+> Event loop runs on the single-thread within Node.js process.
+> Async operations are sent to libuv by event loop and handled by libuv
+
+---
+
+## **2. 2 NPM**
+
+### **1. Feedback**
+
+> Doesn't seem to know about package linking (npm link)
+
+**Answer:**
+
+> `npm-link` is used for package linking which is a two step process.
+>
+> - **Step 1:** a symlink gets created with `npm-link`
+> - **Step 2:** package name is provided as `npm-link <package_name>`
+
+This process allows us to work on both application and the dependancy at the same time
+
+### **2. Feedback**
+
+> may be doubts on checking for available package upgrades
+
+**Answer:**
+
+> To check available updates for our packages, we can use `npm-check-updates` package.
+> To see outdated packages, we can use `npm outdated`
+> To update outdated packages manually, we can use `npm update`
+
+---
+
+## **2. 3 Event Loop**
+
+### **1. Feedback**
+
+> Might be doubts on microtasks
+
+**Answer:**
+
+> **Microtasks** are the tasks that needs to be executed asynchronously and they have a higher priority over **macrotasks**
+
+---
+
+## **2. 4 I/O Operations in Node.js**
+
+### **1. Feedback**
+
+> Might be doubts on related blocking/non-blocking operations being fast/slow in comparison
+
+**Answer:**
+
+> Generally, blocking(sync) operations are faster than the async operations. Depending on the data that I/O operation would be performed or the behaviour we want (e.g. being have to validate a certificate), we could prefer to use synchronous operation. Otherwise, when we're working with an API or an external resource within a network, non-blocking(asynchronous) operations should be used in order to not to block the event loop even though they might be slower
+
+### **2. Feedback**
+
+> Couldn't find cases for sync operations usage
+
+**Answer:**
+
+> reading/writing a small piece of data from/onto disk would be a good case to use synchronous operation.
+
+---
+
+## **2. 5 Node.js Core Modules**
+
+### **1. Feedback**
+
+> Doubts on Using common js vs es modules (f.e. in one project)
+
+**Answer:**
+
+> CommonJS modules and ES Modules can be used in the same project. CommonJS modules can still be imported with ES Modules `import` keyword as long as `type: module` is not used in `package.json`. Instead, we can just use `.mjs` file extension for ES Modules
+
+---
+
+## **2. 6 Streams**
+
+### **1. Feedback**
+
+> Doubts about Transform streams, zipping/encrypting
+
+**Answer:**
+
+> **Transform streams** allow us to modify the data as it is being read or written. For example; `zlib.createGzip` stream can compress the data using gzip.
+
+---
+
+## **2. 7 RDBMS, SQL, PostgreSQL**
+
+### **1. Feedback**
+
+> Normalization, Deeper knowledge on Lock Levels
+
+**Answer:**
+
+> **Normalization** is the process of organizing the data in the database to minimize the redundancy from a relation or to eliminate the anomalies.
+
+---
+
+### **2. 9 Testing**
+
+### **1. Feedback**
+
+> FIRST principles — some doubts on details
+
+**Answer:**
+
+> **FIRST** principles stand for:
+>
+> - **FAST** indicates that unit tests should be able to be ran at any time during development cycle regardless of the test count, and should provide feedback or desired output in the matter of seconds.
+>
+> - **ISOLATED** indicates any given unit test should be independent from any other part of the software as well as its results.
+>
+> - **REPEATABLE** means that the tests must be repeatable and their values shouldn't change for different environments while being independant from any external condition.
+>
+> - **SELF-VALIDATING** means that it shouldn't need any manual interaction.
+>
+> - **THROUGH** indicates that the test should cover all cases including illegal input, security issues and so on while having a %100 code coverage.
+
+### **2. Feedback**
+
+> Couldn't explain Given/When/Then pattern
+
+**Answer:**
+
+> **Given-When-Then** pattern is a style of representing tests.
+>
+> - **'given'** represents the behaviour.
+> - **'when'** represents the action that needs to be completed.
+> - **'then'** represents the expected outcome.
+
+---
+
+### **2. 10 REST**
+
+### **1. Feedback**
+
+> Doubts about REST Levels
+
+**Answer:**
+
+> Levels of a REST API is defined by [**Richardson Maturity Model**](https://restfulapi.net/richardson-maturity-model/)
+>
+> According to this model, there are four levels of maturity for a REST API:
+>
+> - **Level 0** services have a single URI and uses a single HTTP Method
+> - **Level 1** services uses multiple URIs but single HTTP Method
+> - **Level 2** services uses multiple URIs and HTTP Methods but doesn't use HATEOAS
+> - **Level 3** services uses all three: Multiple URIs, HTTP Methods and HATEOAS
+
+### **2. Feedback**
+
+> what makes API RESTful
+
+**Answer:**
+A system that complies some or all of the following guideline constraints is considered RESTful
+
+> - **Uniform Interface**
+>   APIs interface for the resources should be consistent within the system. Resources should only have one logical URI which provides a way to fetch related data.
+> - **Stateless**
+>   All client-server interactions should be stateless. The server shouldn't store anything about the previous requests and treat each request as a new one. No client context should be stored for the next request except authentication and authorization information required for services.
+> - **Cachable**
+>   Caching should be applied wherever its applicable. Caching improves scalability and performance by eliminating some client-server interactions.
+> - **Client-Server**
+>   Client and Server shouldn't depend on each other. They must be replaced and developed independently when needed.
+> - **Layered System**
+>   REST allow to use layered sytstem architecture. API server can be deployed on a different server than the server that stores the data and so on.
+> - **Code On Demand** (optional)
+>   Most of the time a static representation of a resource will be sent. But returning executable code to support part of the application is also possible.
+
+---
+
+## **2. 11 NoSQL, MongoDB**
+
+### **1. Feedback**
+
+> Doubts on Vertical vs. Horizontal scaling of DBs
+
+**Answer**
+
+> - **Horizontal Scaling** is based on partitioning the data between different phyiscal resources where as **Vertical Scaling** depends on a single physical resource.
+> - NoSQL Databases are scaled horizontally, whereas SQL databases scaled vertically as long as there is no sharding.
