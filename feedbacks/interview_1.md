@@ -103,10 +103,10 @@
 **Answer**
 
 > - `.forEach()` method receives a function as an argument and executes it for each element of an array.
-    >   - Returns undefined.
+>   - Returns undefined.
 >   - `.forEach()` method does not mutate the array it's called on but the given callback might mutate.
 > - `.map()` method also receives a function as an argument and applies it on each element.
-    >   - Returns a new array containing the new values.
+>   - Returns a new array containing the new values.
 >   - Does not mutate the original array
 
 ---
@@ -120,7 +120,8 @@
 **Answer**
 
 <!--- It is incorrect to say "have their bindings to", better to omit word "bindings to" -->
-> - **Arrow functions** don't have their bindings to `this`, `super` or `arguments`. Therefore, they shouldn't be used as methods.
+
+> - **Arrow functions** don't bind to `this`, `super` or `arguments`. Therefore, they shouldn't be used as methods.
 > - **Arrow functions** also can not be used as `constructors`. Calling them with `new` keyword would throw a `TypeError`
 
 ---
@@ -144,8 +145,12 @@
 > Doubts of async/await being a syntactic sugar over Promises
 
 **Answer:**
+
 <!--- Wants to see more info about structure of async/await, their built from promises and generators -->
+
 > `async/await` provides a way for more readable and maintainable (cleaner) code compared to `Promise`. It's just a wrapper to restyle our code.
+> `async/await` provides a synchronous looking-like structure for an asynchronous tasks.
+> `async/await` structure is a syntactic sugar for promieses (built on promises)
 
 ---
 
@@ -158,9 +163,14 @@
 > Might be doubts on where event loop and async operations are running
 
 **Answer:**
+
 <!--- Provide more info about async operations, different queues and etc -->
-> Event loop runs on the single-thread within Node.js process.
-> Async operations are sent to libuv by event loop and handled by libuv
+
+> - Event loop runs on the single-thread within Node.js process.
+> - Async operations are sent to libuv by event loop and handled by libuv
+> - When a task queue is empty, event loop checks macrotasks and microtasks queue. **Microtasks** has a higher priority than the **macrotasks**
+> - Synchronous code are run in the task queue and asynchronous code runs on macro and microtask queues.
+>   - Code inside `.then()`, `.catch()`, `.finally()` runs in **microtask** queue.
 
 ---
 
@@ -198,8 +208,11 @@ This process allows us to work on both application and the dependancy at the sam
 > Might be doubts on microtasks
 
 **Answer:**
+
   <!--- What is the order of executing marco/micro tasks? -->
-> **Microtasks** are the tasks that needs to be executed asynchronously and they have a higher priority over **macrotasks**
+
+> **Microtasks** are the tasks that needs to be executed asynchronously and they have a higher priority over **macrotasks**.
+> If there is a call in the **Microtask** queue, that will run first before event loop starts calling tasks from **Macrotask** queue
 
 ---
 
@@ -210,8 +223,11 @@ This process allows us to work on both application and the dependancy at the sam
 > Might be doubts on related blocking/non-blocking operations being fast/slow in comparison
 
 **Answer:**
+
   <!--- Why sync operation faster when async? -->
+
 > Generally, blocking(sync) operations are faster than the async operations. Depending on the data that I/O operation would be performed or the behaviour we want (e.g. being have to validate a certificate), we could prefer to use synchronous operation. Otherwise, when we're working with an API or an external resource within a network, non-blocking(asynchronous) operations should be used in order to not to block the event loop even though they might be slower
+> Sync operations are ran on the OS level while blocking the event loop, whereas Async operations are handled with an external library. For that reason, synchronous code will run faster when the data is not large and read from a local resource.
 
 ### **2. Feedback**
 
@@ -318,17 +334,17 @@ This process allows us to work on both application and the dependancy at the sam
 A system that complies some or all of the following guideline constraints is considered RESTful
 
 > - **Uniform Interface**
-    >   APIs interface for the resources should be consistent within the system. Resources should only have one logical URI which provides a way to fetch related data.
+>   APIs interface for the resources should be consistent within the system. Resources should only have one logical URI which provides a way to fetch related data.
 > - **Stateless**
-    >   All client-server interactions should be stateless. The server shouldn't store anything about the previous requests and treat each request as a new one. No client context should be stored for the next request except authentication and authorization information required for services.
+>   All client-server interactions should be stateless. The server shouldn't store anything about the previous requests and treat each request as a new one. No client context should be stored for the next request except authentication and authorization information required for services.
 > - **Cachable**
-    >   Caching should be applied wherever its applicable. Caching improves scalability and performance by eliminating some client-server interactions.
+>   Caching should be applied wherever its applicable. Caching improves scalability and performance by eliminating some client-server interactions.
 > - **Client-Server**
-    >   Client and Server shouldn't depend on each other. They must be replaced and developed independently when needed.
+>   Client and Server shouldn't depend on each other. They must be replaced and developed independently when needed.
 > - **Layered System**
-    >   REST allow to use layered sytstem architecture. API server can be deployed on a different server than the server that stores the data and so on.
+>   REST allow to use layered sytstem architecture. API server can be deployed on a different server than the server that stores the data and so on.
 > - **Code On Demand** (optional)
-    >   Most of the time a static representation of a resource will be sent. But returning executable code to support part of the application is also possible.
+>   Most of the time a static representation of a resource will be sent. But returning executable code to support part of the application is also possible.
 
 ---
 
@@ -339,7 +355,9 @@ A system that complies some or all of the following guideline constraints is con
 > Doubts on Vertical vs. Horizontal scaling of DBs
 
 **Answer**
+
 <!--- We can't say that NoSQL databases scaled only horizontally and SQL - vertically -->
+
 > - **Horizontal Scaling** is based on partitioning the data between different phyiscal resources where as **Vertical Scaling** depends on a single physical resource.
 > - NoSQL Databases are scaled horizontally, whereas SQL databases scaled vertically as long as there is no sharding.
 
@@ -397,5 +415,9 @@ A system that complies some or all of the following guideline constraints is con
 > Basic knowledge of interfaces and types; no details on difference
 
 **Answer:**
+
    <!--- There are more differences between Interfaces and Types -->
+
 > `interface` can be extended by declaring it a second time, whereas `type` can not. `type` can not be changed outside of its declaration
+> `type` alias can be used for other types than objects and functions unline `interface`. Such as primitive types, unions, tuples.
+> Multiple `interface` declarations are merged and treated as a single declaration, whereas `type` declarations are not.
